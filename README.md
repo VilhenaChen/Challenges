@@ -1,2 +1,2 @@
 # Challenges
-A repository with some of the Tech challenges that i found for training or testing
+This repository showcases a collection of technical challenges completed for training, experimentation, and technical assessments. Each project focuses on improving problem-solving skills, architecture decisions, and best development practices.
