@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.AlbumDetailedInformationFragment"
+    android:padding="16dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/albumArt"
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:src="@drawable/album_art_placeholder"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/albumName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/albumArt"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            android:layout_marginTop="25dp"
+            android:gravity="center"
+            android:textAppearance="@style/albumNameDetailsText"
+            tools:text="Album Name" />
+
+        <TextView
+            android:id="@+id/artistName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/albumName"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textAppearance="@style/artistNameDetailsText"
+            tools:text="Artist Name" />
+
+        <TextView
+            android:id="@+id/genreText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/artistName"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            android:layout_marginTop="55dp"
+            android:textAppearance="@style/extraDetailsText"
+            android:text="@string/genre" />
+
+        <TextView
+            android:id="@+id/genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/genreText"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            android:textAppearance="@style/extraDetailsText"
+            tools:text="Pop" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/genreText"
+            app:layout_constraintStart_toStartOf="@id/genreText"
+            app:layout_constraintEnd_toEndOf="@id/price"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/priceText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/genre"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/extraDetailsText"
+            android:text="@string/price" />
+
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/priceText"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            android:textAppearance="@style/extraDetailsText"
+            tools:text="9,99" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/priceText"
+            app:layout_constraintStart_toStartOf="@id/priceText"
+            app:layout_constraintEnd_toEndOf="@id/price"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"/>
+
+        <TextView
+            android:id="@+id/releaseDateText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/price"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/extraDetailsText"
+            android:text="@string/released_on" />
+
+        <TextView
+            android:id="@+id/releaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="@id/releaseDateText"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            android:textAppearance="@style/extraDetailsText"
+            tools:text="1 January 2026" />
+
+        <com.google.android.material.divider.MaterialDivider
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/releaseDateText"
+            app:layout_constraintStart_toStartOf="@id/releaseDateText"
+            app:layout_constraintEnd_toEndOf="@id/price"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="5dp"/>
+
+
+        <com.google.android.material.button.MaterialButtonGroup
+            android:id="@+id/buttonGroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="@id/albumArt"
+            app:layout_constraintEnd_toEndOf="@id/albumArt"
+            app:layout_constraintTop_toBottomOf="@id/releaseDateText"
+            android:layout_marginTop="25dp">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/spotifyBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Spotify"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#1DB954"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/appleMusicBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Apple Music"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FA2A55" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/youtubeMusicBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="YT Music"
+                android:textColor="@android:color/white"
+                app:backgroundTint="#FF0000" />
+
+        </com.google.android.material.button.MaterialButtonGroup>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
