@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TopMusicAlbunsChallengeCompose</string>
+    <string name="error">Error</string>
+    <string name="error_description">Please check your internet connection and try again</string>
+    <string name="retry_btn">Retry</string>
+    <string name="alphabetically">Alphabetically</string>
+    <string name="top">Top</string>
+    <string name="favorites">Favorites</string>
+</resources>
